@@ -1,6 +1,7 @@
 package com.krypton.controller;
 
 import com.krypton.dto.response.ImportStatusResponse;
+import com.krypton.service.ImportService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -9,13 +10,24 @@ import org.springframework.web.multipart.MultipartFile;
 @RequestMapping("/api/import")
 public class ImportController {
 
+    private final ImportService importService;
+
+    public ImportController(ImportService importService) {
+        this.importService = importService;
+    }
+
     @PostMapping("/xml")
     public ResponseEntity<ImportStatusResponse> importXml(@RequestParam("file") MultipartFile file) {
-        return ResponseEntity.ok(ImportStatusResponse.builder().build());
+        ImportStatusResponse status = importService.startImportJob(file);
+        return ResponseEntity.ok(status);
     }
 
     @GetMapping("/status/{jobId}")
     public ResponseEntity<ImportStatusResponse> getImportStatus(@PathVariable String jobId) {
-        return ResponseEntity.ok(ImportStatusResponse.builder().build());
+        ImportStatusResponse status = importService.getJobStatus(jobId);
+        if (status == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(status);
     }
-}\n
+}
