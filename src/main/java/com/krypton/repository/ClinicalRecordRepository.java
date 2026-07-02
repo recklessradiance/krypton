@@ -59,4 +59,4 @@ public class ClinicalRecordRepository {
     public void delete(String id) throws ExecutionException, InterruptedException {
         firestore.collection(COLLECTION).document(id).delete().get();
     }
-}\n
+}

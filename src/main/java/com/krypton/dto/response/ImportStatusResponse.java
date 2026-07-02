@@ -14,4 +14,4 @@ public class ImportStatusResponse {
     private String status; // PENDING, PROCESSING, COMPLETED, FAILED
     private Integer progressPercent;
     private String message;
-}\n
+}

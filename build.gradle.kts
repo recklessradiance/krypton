@@ -1,14 +1,13 @@
 plugins {
     java
     id("org.springframework.boot") version "3.2.5"
-    id("io.spring.dependency-management") version "1.1.4"
 }
 
 group = "com.krypton"
 version = "0.0.1-SNAPSHOT"
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_21
+    sourceCompatibility = JavaVersion.VERSION_17
 }
 
 configurations {
@@ -22,6 +21,7 @@ repositories {
 }
 
 dependencies {
+    implementation(platform("org.springframework.boot:spring-boot-dependencies:3.2.5"))
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-validation")
     
@@ -32,10 +32,10 @@ dependencies {
     implementation("org.apache.pdfbox:pdfbox:3.0.2")
     
     // Google Gen AI / Gemini SDK (or client library)
-    implementation("com.google.cloud:google-cloud-vertexai:0.9.0")
+    implementation("com.google.cloud:google-cloud-vertexai:1.5.0")
     
-    compileOnly("org.projectlombok:lombok")
-    annotationProcessor("org.projectlombok:lombok")
+    compileOnly("org.projectlombok:lombok:1.18.32")
+    annotationProcessor("org.projectlombok:lombok:1.18.32")
     
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }

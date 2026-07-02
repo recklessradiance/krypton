@@ -54,4 +54,4 @@ public class DailyMetricsRepository {
     public void delete(String date) throws ExecutionException, InterruptedException {
         firestore.collection(COLLECTION).document(date).delete().get();
     }
-}\n
+}

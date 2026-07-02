@@ -14,4 +14,4 @@ public class ExtractedMetric {
     private String unit;
     private String refRange;
     private String status; // normal, low, high
-}\n
+}

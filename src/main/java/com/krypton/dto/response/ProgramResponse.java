@@ -18,4 +18,4 @@ public class ProgramResponse {
     private Boolean isActive;
     private Integer currentDay;
     private List<Map<String, Object>> days;
-}\n
+}

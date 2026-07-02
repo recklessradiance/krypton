@@ -15,4 +15,4 @@ public class WorkoutLog {
     private Integer programDay;
     private String title;
     private List<Exercise> exercises;
-}\n
+}

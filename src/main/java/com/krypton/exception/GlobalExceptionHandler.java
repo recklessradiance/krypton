@@ -44,4 +44,4 @@ public class GlobalExceptionHandler {
                 .build();
         return new ResponseEntity<>(response, status);
     }
-}\n
+}

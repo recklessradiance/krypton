@@ -17,4 +17,4 @@ public class ProgramUploadRequest {
     private String name;
     
     private List<Map<String, Object>> days;
-}\n
+}

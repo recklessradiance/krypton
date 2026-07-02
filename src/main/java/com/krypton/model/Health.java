@@ -15,4 +15,4 @@ public class Health {
     private Double bloodGlucoseFasting;
     private Double bloodGlucosePP;
     private Double weight;
-}\n
+}

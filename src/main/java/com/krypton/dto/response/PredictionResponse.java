@@ -15,4 +15,4 @@ public class PredictionResponse {
     private LocalDateTime generatedAt;
     private Integer dataPointsUsed;
     private Map<String, Object> predictions;
-}\n
+}

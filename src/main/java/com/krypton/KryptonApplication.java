@@ -10,4 +10,4 @@ public class KryptonApplication {
     public static void main(String[] args) {
         SpringApplication.run(KryptonApplication.class, args);
     }
-}\n
+}

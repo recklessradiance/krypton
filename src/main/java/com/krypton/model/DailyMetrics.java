@@ -19,4 +19,4 @@ public class DailyMetrics {
     private String source;
     private Instant createdAt;
     private Instant updatedAt;
-}\n
+}

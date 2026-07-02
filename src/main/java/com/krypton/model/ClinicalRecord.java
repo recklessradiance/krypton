@@ -18,4 +18,4 @@ public class ClinicalRecord {
     private String pdfStoragePath;
     private Map<String, ExtractedMetric> extractedMetrics;
     private Instant createdAt;
-}\n
+}

@@ -38,4 +38,4 @@ public class BenchmarkProvider {
     }
 
     public static record IdealRange(Double min, Double max, String source) {}
-}\n
+}

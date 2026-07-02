@@ -14,4 +14,4 @@ public class ProgramDay {
     private Integer day;
     private String title;
     private List<Exercise> exercises;
-}\n
+}

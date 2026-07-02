@@ -19,4 +19,4 @@ public class Program {
     private Integer currentDay;
     private List<ProgramDay> days;
     private Instant createdAt;
-}\n
+}

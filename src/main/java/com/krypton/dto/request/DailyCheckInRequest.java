@@ -20,4 +20,4 @@ public class DailyCheckInRequest {
     private Map<String, Object> health;
     
     private String notes;
-}\n
+}

@@ -16,4 +16,4 @@ public class Checklist {
     private Boolean vegCurry;
     private Boolean soya;
     private Boolean water;
-}\n
+}

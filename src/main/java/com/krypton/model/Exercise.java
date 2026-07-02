@@ -20,4 +20,4 @@ public class Exercise {
     private String duration;
     private String unit;
     private String note;
-}\n
+}

@@ -67,4 +67,4 @@ public class HealthController {
             throw new RuntimeException("Failed to generate predictions", e);
         }
     }
-}\n
+}

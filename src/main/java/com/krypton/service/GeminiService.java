@@ -76,7 +76,7 @@ public class GeminiService {
                         .setResponseMimeType("application/json")
                         .build();
 
-                GenerativeModel model = new GenerativeModel("gemini-1.5-flash", generationConfig, vertexAi);
+                GenerativeModel model = new GenerativeModel("gemini-1.5-flash", vertexAi).withGenerationConfig(generationConfig);
 
                 String prompt = "You are a clinical report extraction assistant. Your job is to extract medical metrics from the clinical text provided. " +
                         "Extract the name of the test/metric (in camelCase, e.g. totalCholesterol, ldlCholesterol, hba1c, thyroidStimulatingHarmone, vitaminD) and map it to a structured JSON object. " +
@@ -129,4 +129,4 @@ public class GeminiService {
         return GoogleCredentials.getApplicationDefault()
                 .createScoped(Collections.singleton("https://www.googleapis.com/auth/cloud-platform"));
     }
-}\n
+}

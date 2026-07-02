@@ -64,4 +64,4 @@ public class FirebaseConfig {
     public Bucket storageBucket() {
         return StorageClient.getInstance().bucket();
     }
-}\n
+}

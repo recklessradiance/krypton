@@ -14,4 +14,4 @@ public class HealthDataRequest {
     private Double restingHeartRate;
     private Double bloodGlucose;
     private Double weight;
-}\n
+}

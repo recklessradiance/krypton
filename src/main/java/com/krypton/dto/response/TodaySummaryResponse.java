@@ -16,4 +16,4 @@ public class TodaySummaryResponse {
     private Map<String, Boolean> checklist;
     private Map<String, Object> health;
     private Map<String, Object> workout;
-}\n
+}

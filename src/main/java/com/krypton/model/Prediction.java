@@ -15,4 +15,4 @@ public class Prediction {
     private Double currentAvg;
     private Map<String, Object> horizons;
     private String trendDescription;
-}\n
+}

@@ -16,4 +16,4 @@ public class ClinicalResponse {
     private String reportType;
     private String pdfDownloadUrl;
     private Map<String, Object> extractedMetrics;
-}\n
+}
