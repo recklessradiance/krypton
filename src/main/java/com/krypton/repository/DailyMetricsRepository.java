@@ -44,6 +44,13 @@ public class DailyMetricsRepository {
                 .collect(Collectors.toList());
     }
 
+    public List<DailyMetrics> findAll() throws ExecutionException, InterruptedException {
+        QuerySnapshot querySnapshot = firestore.collection(COLLECTION).get().get();
+        return querySnapshot.getDocuments().stream()
+                .map(doc -> doc.toObject(DailyMetrics.class))
+                .collect(Collectors.toList());
+    }
+
     public void delete(String date) throws ExecutionException, InterruptedException {
         firestore.collection(COLLECTION).document(date).delete().get();
     }

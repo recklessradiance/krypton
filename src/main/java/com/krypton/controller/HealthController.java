@@ -4,6 +4,7 @@ import com.krypton.dto.request.DailyCheckInRequest;
 import com.krypton.dto.response.TodaySummaryResponse;
 import com.krypton.dto.response.PredictionResponse;
 import com.krypton.service.HealthService;
+import com.krypton.service.PredictionService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import jakarta.validation.Valid;
@@ -15,9 +16,11 @@ import java.util.List;
 public class HealthController {
 
     private final HealthService healthService;
+    private final PredictionService predictionService;
 
-    public HealthController(HealthService healthService) {
+    public HealthController(HealthService healthService, PredictionService predictionService) {
         this.healthService = healthService;
+        this.predictionService = predictionService;
     }
 
     @PostMapping("/daily")
@@ -57,7 +60,11 @@ public class HealthController {
     public ResponseEntity<PredictionResponse> getPredictions(
             @RequestParam List<String> metrics,
             @RequestParam List<String> horizons) {
-        // Predictions will be fully implemented in a later phase
-        return ResponseEntity.ok(PredictionResponse.builder().build());
+        try {
+            PredictionResponse response = predictionService.getPredictions(metrics, horizons);
+            return ResponseEntity.ok(response);
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to generate predictions", e);
+        }
     }
 }\n
