@@ -1,0 +1,298 @@
+[
+  {
+    "day": 1,
+    "title": "Shoulders, Chest & Triceps",
+    "exercises": [
+      { "name": "Shoulder Press", "sets": 4, "reps": [12, 10, 10, 8] },
+      { "name": "Chest Press", "sets": 4, "reps": [12, 10, 10, 8] },
+      { "name": "Lateral Raises", "sets": 4, "reps": [6, 6, 4, 3] },
+      { "name": "Tricep Extensions", "sets": 4, "reps": [5, 4, 4, 3], "perArm": true }
+    ]
+  },
+  {
+    "day": 2,
+    "title": "Back & Biceps",
+    "exercises": [
+      { "name": "Alternate Bicep Curls", "sets": 4, "reps": [6, 5, 5, 4], "perArm": true },
+      { "name": "Upright Rows", "sets": 4, "reps": [8, 8, 6, 5] },
+      { "name": "Deadlifts", "sets": 4, "reps": [8, 8, 6, 5] },
+      { "name": "Shrugs", "sets": 4, "reps": [10, 10, 8, 6] },
+      { "name": "Bent Over Rows", "sets": 4, "reps": [8, 8, 6, 5] },
+      { "name": "Bent Over Flys", "sets": 4, "reps": [6, 5, 5, 4] }
+    ]
+  },
+  {
+    "day": 3,
+    "title": "Leg Day",
+    "exercises": [
+      { "name": "Goblet Squats", "sets": 4, "reps": [12, 10, 10, 8] },
+      { "name": "Forward Lunges", "sets": 4, "reps": [5, 4, 4, 3], "perLeg": true },
+      { "name": "Side Lunges", "sets": 4, "reps": [5, 4, 4, 3], "perSide": true },
+      { "name": "Calf Raises", "sets": 4, "reps": [14, 12, 12, 10] }
+    ]
+  },
+  {
+    "day": 4,
+    "title": "Ab Work",
+    "exercises": [
+      { "name": "Sit-ups", "sets": 4, "reps": [16, 14, 14, 10] },
+      { "name": "Sitting Twists", "sets": 4, "reps": [8, 7, 7, 5], "perSide": true },
+      { "name": "Leg Raises", "sets": 4, "reps": [16, 14, 14, 12] },
+      { "name": "Flutter Kicks", "sets": 4, "reps": [10, 8, 8, 6], "perLeg": true }
+    ]
+  },
+  {
+    "day": 5,
+    "title": "Shoulders, Chest & Triceps",
+    "exercises": [
+      { "name": "Arnold Press", "sets": 4, "reps": [10, 10, 8, 6] },
+      { "name": "Push-ups", "sets": 4, "reps": [12, 10, 10, 8], "note": "or to failure" },
+      { "name": "Lateral Raises", "sets": 4, "reps": [6, 5, 5, 4] },
+      { "name": "Tricep Extensions", "sets": 4, "reps": [6, 5, 5, 4] }
+    ]
+  },
+  {
+    "day": 6,
+    "title": "Back & Biceps",
+    "exercises": [
+      { "name": "Bicep Curls", "sets": 4, "reps": [10, 8, 8, 6] },
+      { "name": "Bent Over Rows", "sets": 4, "reps": [8, 8, 6, 6] },
+      { "name": "Farmer's Walk", "sets": 4, "reps": [14, 12, 10, 10], "unit": "steps" }
+    ]
+  },
+  {
+    "day": 7,
+    "title": "Leg Day",
+    "exercises": [
+      { "name": "Squats", "sets": 4, "reps": [8, 8, 6, 4] },
+      { "name": "Forward Lunges", "sets": 4, "reps": [6, 4, 4, 3], "perLeg": true },
+      { "name": "Reverse Lunge Step-ups", "sets": 4, "reps": [5, 4, 4, 3], "perLeg": true },
+      { "name": "Calf Raises", "sets": 4, "reps": [14, 14, 12, 10] }
+    ]
+  },
+  {
+    "day": 8,
+    "title": "Ab Work",
+    "exercises": [
+      { "name": "Elbow Plank Leg Raises", "sets": 4, "reps": [10, 8, 8, 6], "perLeg": true },
+      { "name": "Up & Down Planks", "sets": 4, "reps": [10, 8, 8, 6] },
+      { "name": "Elbow Plank", "sets": 4, "duration": "30 seconds" },
+      { "name": "Side Elbow Plank", "sets": 4, "duration": "30 seconds each side" }
+    ]
+  },
+  {
+    "day": 9,
+    "title": "Shoulders, Chest & Triceps",
+    "exercises": [
+      { "name": "Shoulder Press", "sets": 4, "reps": [12, 12, 10, 8] },
+      { "name": "Chest Press", "sets": 4, "reps": [12, 12, 10, 8] },
+      { "name": "Lateral Raises", "sets": 4, "reps": [7, 6, 5, 4] },
+      { "name": "Forward Raises", "sets": 4, "reps": [5, 4, 4, 3], "perArm": true }
+    ]
+  },
+  {
+    "day": 10,
+    "title": "Back & Biceps",
+    "exercises": [
+      { "name": "Alternate Bicep Curls", "sets": 4, "reps": [6, 5, 5, 4], "perArm": true },
+      { "name": "Upright Rows", "sets": 4, "reps": [10, 8, 6, 5] },
+      { "name": "Deadlifts", "sets": 4, "reps": [10, 8, 6, 5] },
+      { "name": "Shrugs", "sets": 4, "reps": [12, 10, 8, 6] },
+      { "name": "Renegade Rows", "sets": 4, "reps": [7, 6, 6, 5], "perArm": true }
+    ]
+  },
+  {
+    "day": 11,
+    "title": "Leg Day",
+    "exercises": [
+      { "name": "Goblet Squats", "sets": 4, "reps": [12, 12, 10, 8] },
+      { "name": "Forward Lunges", "sets": 4, "reps": [5, 5, 4, 3], "perLeg": true },
+      { "name": "Single Leg Deadlifts", "sets": 4, "reps": [5, 5, 4, 3], "perSide": true },
+      { "name": "Calf Raises", "sets": 4, "reps": [14, 14, 12, 12] }
+    ]
+  },
+  {
+    "day": 12,
+    "title": "Ab Work",
+    "exercises": [
+      { "name": "Sit-ups", "sets": 4, "reps": [16, 16, 14, 10] },
+      { "name": "Sitting Twists", "sets": 4, "reps": [8, 7, 7, 6], "perSide": true },
+      { "name": "Leg Raises", "sets": 4, "reps": [16, 16, 14, 12] },
+      { "name": "Side Jackknives", "sets": 4, "reps": [10, 8, 8, 6], "perSide": true }
+    ]
+  },
+  {
+    "day": 13,
+    "title": "Shoulders, Chest & Triceps",
+    "exercises": [
+      { "name": "Arnold Press", "sets": 4, "reps": [10, 10, 8, 8] },
+      { "name": "Push-ups", "sets": 4, "reps": [12, 12, 10, 8], "note": "or to failure" },
+      { "name": "Lateral Raises", "sets": 4, "reps": [7, 6, 6, 4] },
+      { "name": "Tricep Extensions", "sets": 4, "reps": [6, 5, 5, 4] }
+    ]
+  },
+  {
+    "day": 14,
+    "title": "Back & Biceps",
+    "exercises": [
+      { "name": "Alternate Bicep Curls", "sets": 4, "reps": [7, 6, 5, 4], "perArm": true },
+      { "name": "Upright Rows", "sets": 4, "reps": [10, 8, 6, 6] },
+      { "name": "Deadlifts", "sets": 4, "reps": [10, 8, 8, 5] },
+      { "name": "Shrugs", "sets": 4, "reps": [12, 10, 10, 6] },
+      { "name": "Bent Over Rows", "sets": 4, "reps": [10, 8, 6, 6] },
+      { "name": "Bent Over Flys", "sets": 4, "reps": [6, 6, 5, 4] }
+    ]
+  },
+  {
+    "day": 15,
+    "title": "Leg Day",
+    "exercises": [
+      { "name": "Squats", "sets": 4, "reps": [10, 8, 6, 4] },
+      { "name": "Forward Lunges", "sets": 4, "reps": [6, 5, 4, 4], "perLeg": true },
+      { "name": "Side Lunges", "sets": 4, "reps": [5, 5, 4, 3], "perSide": true },
+      { "name": "Calf Raises", "sets": 4, "reps": [16, 14, 12, 12] }
+    ]
+  },
+  {
+    "day": 16,
+    "title": "Ab Work",
+    "exercises": [
+      { "name": "Elbow Plank Leg Raises", "sets": 4, "reps": [10, 10, 8, 6], "perLeg": true },
+      { "name": "Elbow Plank Side Crunches", "sets": 4, "reps": [10, 8, 8, 6], "perSide": true },
+      { "name": "Elbow Plank", "sets": 4, "duration": "40 seconds" },
+      { "name": "Side Elbow Plank", "sets": 4, "duration": "20 seconds each side" }
+    ]
+  },
+  {
+    "day": 17,
+    "title": "Shoulders, Chest & Triceps",
+    "exercises": [
+      { "name": "Shoulder Press", "sets": 4, "reps": [12, 12, 10, 10] },
+      { "name": "Chest Press", "sets": 4, "reps": [12, 12, 10, 10] },
+      { "name": "Lateral Raises", "sets": 4, "reps": [7, 7, 6, 4] },
+      { "name": "Tricep Extensions", "sets": 4, "reps": [6, 5, 4, 3], "perArm": true }
+    ]
+  },
+  {
+    "day": 18,
+    "title": "Back & Biceps",
+    "exercises": [
+      { "name": "Bicep Curls", "sets": 4, "reps": [12, 10, 8, 6] },
+      { "name": "Bent Over Rows", "sets": 4, "reps": [10, 8, 8, 6] },
+      { "name": "Farmer's Walk", "sets": 4, "reps": [14, 14, 12, 10], "unit": "steps" }
+    ]
+  },
+  {
+    "day": 19,
+    "title": "Leg Day",
+    "exercises": [
+      { "name": "Goblet Squats", "sets": 4, "reps": [12, 12, 10, 10] },
+      { "name": "Forward Lunges", "sets": 4, "reps": [6, 5, 5, 4], "perLeg": true },
+      { "name": "Single Leg Deadlifts", "sets": 4, "reps": [6, 5, 4, 3], "perSide": true },
+      { "name": "Calf Raises", "sets": 4, "reps": [16, 14, 14, 12] }
+    ]
+  },
+  {
+    "day": 20,
+    "title": "Ab Work",
+    "exercises": [
+      { "name": "V-ups", "sets": 4, "reps": [10, 10, 8, 6] },
+      { "name": "Sitting Twists", "sets": 4, "reps": [10, 7, 7, 6], "perSide": true },
+      { "name": "Leg Raises", "sets": 4, "reps": [18, 16, 14, 12] },
+      { "name": "Knee-ins & Twist", "sets": 4, "reps": [10, 8, 8, 6], "perSide": true }
+    ]
+  },
+  {
+    "day": 21,
+    "title": "Shoulders, Chest & Triceps",
+    "exercises": [
+      { "name": "Arnold Press", "sets": 4, "reps": [12, 10, 8, 8] },
+      { "name": "Push-ups", "sets": 4, "reps": [12, 12, 10, 10], "note": "or to failure" },
+      { "name": "Lateral Raises", "sets": 4, "reps": [7, 7, 6, 5] },
+      { "name": "Tricep Extensions", "sets": 4, "reps": [6, 5, 5, 4] }
+    ]
+  },
+  {
+    "day": 22,
+    "title": "Back & Biceps",
+    "exercises": [
+      { "name": "Alternate Bicep Curls", "sets": 4, "reps": [7, 6, 5, 5], "perArm": true },
+      { "name": "Upright Rows", "sets": 4, "reps": [12, 8, 6, 6] },
+      { "name": "Deadlifts", "sets": 4, "reps": [10, 8, 8, 6] },
+      { "name": "Shrugs", "sets": 4, "reps": [12, 10, 10, 8] },
+      { "name": "Renegade Rows", "sets": 4, "reps": [8, 6, 6, 5], "perArm": true }
+    ]
+  },
+  {
+    "day": 23,
+    "title": "Leg Day",
+    "exercises": [
+      { "name": "Squats", "sets": 4, "reps": [10, 8, 6, 6] },
+      { "name": "Forward Lunges", "sets": 4, "reps": [6, 6, 5, 4], "perLeg": true },
+      { "name": "Reverse Lunge Step-ups", "sets": 4, "reps": [5, 5, 4, 3], "perLeg": true },
+      { "name": "Calf Raises", "sets": 4, "reps": [16, 16, 14, 12] }
+    ]
+  },
+  {
+    "day": 24,
+    "title": "Ab Work",
+    "exercises": [
+      { "name": "Elbow Plank Leg Raises", "sets": 4, "reps": [10, 10, 8, 8], "perLeg": true },
+      { "name": "Up & Down Planks", "sets": 4, "reps": [12, 10, 8, 6] },
+      { "name": "Elbow Plank", "sets": 4, "duration": "30 seconds" },
+      { "name": "Side Elbow Plank", "sets": 4, "duration": "30 seconds each side" }
+    ]
+  },
+  {
+    "day": 25,
+    "title": "Shoulders, Chest & Triceps",
+    "exercises": [
+      { "name": "Shoulder Press", "sets": 4, "reps": [14, 12, 10, 10] },
+      { "name": "Chest Press", "sets": 4, "reps": [14, 12, 10, 10] },
+      { "name": "Lateral Raises", "sets": 4, "reps": [8, 7, 6, 5] },
+      { "name": "Forward Raises", "sets": 4, "reps": [5, 4, 4, 3], "perArm": true }
+    ]
+  },
+  {
+    "day": 26,
+    "title": "Back & Biceps",
+    "exercises": [
+      { "name": "Alternate Bicep Curls", "sets": 4, "reps": [8, 6, 6, 5], "perArm": true },
+      { "name": "Upright Rows", "sets": 4, "reps": [12, 8, 8, 6] },
+      { "name": "Deadlifts", "sets": 4, "reps": [12, 8, 8, 6] },
+      { "name": "Shrugs", "sets": 4, "reps": [12, 12, 10, 8] },
+      { "name": "Bent Over Rows", "sets": 4, "reps": [12, 8, 8, 6] },
+      { "name": "Bent Over Flys", "sets": 4, "reps": [8, 6, 5, 4] }
+    ]
+  },
+  {
+    "day": 27,
+    "title": "Leg Day",
+    "exercises": [
+      { "name": "Squats", "sets": 4, "reps": [14, 12, 10, 10] },
+      { "name": "Forward Lunges", "sets": 4, "reps": [6, 6, 5, 5], "perLeg": true },
+      { "name": "Single Leg Deadlifts", "sets": 4, "reps": [6, 5, 4, 4], "perSide": true },
+      { "name": "Calf Raises", "sets": 4, "reps": [16, 16, 14, 14] }
+    ]
+  },
+  {
+    "day": 28,
+    "title": "Ab Work",
+    "exercises": [
+      { "name": "Sit-ups", "sets": 4, "reps": [16, 16, 14, 14] },
+      { "name": "Sitting Twists", "sets": 4, "reps": [10, 8, 7, 7], "perSide": true },
+      { "name": "Leg Raises", "sets": 4, "reps": [18, 18, 14, 12] },
+      { "name": "Side Jackknives", "sets": 4, "reps": [12, 10, 8, 6], "perSide": true }
+    ]
+  },
+  {
+    "day": 29,
+    "title": "Shoulders, Chest & Triceps",
+    "exercises": [
+      { "name": "Arnold Press", "sets": 4, "reps": [12, 12, 10, 8] },
+      { "name": "Push-ups", "sets": 4, "reps": [14, 12, 10, 10], "note": "or to failure" },
+      { "name": "Lateral Raises", "sets": 4, "reps": [8, 8, 7, 5] },
+      { "name": "Tricep Extensions", "sets": 4, "reps": [8, 6, 4, 4], "perArm": true }
+    ]
+  }
+]
