@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: krypton
+  servlet:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 500MB
+
+krypton:
+  api-key: ${API_KEY:default-secret-key}
+  cors-origin: ${CORS_ORIGIN:*}
+  gemini-api-key: ${GEMINI_API_KEY:}\n
