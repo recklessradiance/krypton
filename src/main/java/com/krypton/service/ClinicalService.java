@@ -39,10 +39,10 @@ public class ClinicalService {
 
     public ClinicalService(ClinicalRecordRepository clinicalRecordRepository,
                            GeminiService geminiService,
-                           Bucket bucket) {
+                           Optional<Bucket> bucket) {
         this.clinicalRecordRepository = clinicalRecordRepository;
         this.geminiService = geminiService;
-        this.bucket = bucket;
+        this.bucket = bucket.orElse(null);
     }
 
     public ClinicalResponse upload(MultipartFile file) {
@@ -76,6 +76,9 @@ public class ClinicalService {
         }
 
         // 1. Upload to Firebase Storage
+        if (bucket == null) {
+            throw new ClinicalExtractionException("Firebase Storage bucket is not configured. Please activate Storage in the Firebase Console.");
+        }
         try {
             bucket.create(storagePath, file.getBytes(), file.getContentType());
         } catch (IOException e) {
@@ -159,6 +162,9 @@ public class ClinicalService {
     }
 
     private String getDownloadUrl(String blobPath) {
+        if (bucket == null) {
+            return "https://storage.googleapis.com/placeholder-bucket/" + blobPath;
+        }
         try {
             Storage storage = bucket.getStorage();
             BlobId blobId = BlobId.of(bucket.getName(), blobPath);

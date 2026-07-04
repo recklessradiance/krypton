@@ -62,6 +62,11 @@ public class FirebaseConfig {
 
     @Bean
     public Bucket storageBucket() {
-        return StorageClient.getInstance().bucket();
+        try {
+            return StorageClient.getInstance().bucket();
+        } catch (Exception e) {
+            System.err.println("Firebase Storage Bucket could not be initialized: " + e.getMessage());
+            return null;
+        }
     }
 }
