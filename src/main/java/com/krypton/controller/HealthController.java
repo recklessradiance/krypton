@@ -33,6 +33,16 @@ public class HealthController {
         }
     }
 
+    @DeleteMapping("/daily/{date}")
+    public ResponseEntity<Void> deleteDaily(@PathVariable String date) {
+        try {
+            healthService.deleteDaily(date);
+            return ResponseEntity.ok().build();
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to delete daily metrics", e);
+        }
+    }
+
     @GetMapping("/today")
     public ResponseEntity<TodaySummaryResponse> getTodaySummary() {
         try {

@@ -11,7 +11,7 @@ if lsof -Pi :8080 -sTCP:LISTEN -t >/dev/null ; then
 fi
 
 echo "1. Starting backend server in the background..."
-export GEMINI_API_KEY="AQ.Ab8RN6LGNBtsh_Nj2RWXw7wh-ZCXoz0DyZSEzJZ_ECRy7OMa4w"
+export GEMINI_API_KEY="AQ.Ab8RN6Iusg2BjFj1Rw4B_EdC-fp_EsWZtoyiQha405Pj9ba4qA"
 export FIREBASE_PROJECT_ID="ironborn-9f5b9"
 
 gradle bootRun > server_test.log 2>&1 &

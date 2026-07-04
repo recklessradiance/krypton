@@ -83,13 +83,21 @@ public class HealthService {
         repository.save(metrics);
     }
 
+    public void deleteDaily(String date) throws ExecutionException, InterruptedException {
+        repository.delete(date);
+    }
+
     public TodaySummaryResponse getTodaySummary(String dateStr) throws ExecutionException, InterruptedException {
         LocalDate targetDate = LocalDate.parse(dateStr);
         LocalDate thirtyDaysAgo = targetDate.minusDays(30);
-
         List<DailyMetrics> history = repository.findByDateRange(thirtyDaysAgo.toString(), dateStr);
+        return getTodaySummary(dateStr, history);
+    }
+
+    public TodaySummaryResponse getTodaySummary(String dateStr, List<DailyMetrics> history) {
+        LocalDate targetDate = LocalDate.parse(dateStr);
         Map<String, DailyMetrics> historyMap = history.stream()
-                .collect(Collectors.toMap(DailyMetrics::getDate, m -> m));
+                .collect(Collectors.toMap(DailyMetrics::getDate, m -> m, (a, b) -> a));
 
         DailyMetrics todayMetrics = historyMap.get(dateStr);
         
@@ -168,10 +176,29 @@ public class HealthService {
     }
 
     public List<TodaySummaryResponse> getHistory(String from, String to) throws ExecutionException, InterruptedException {
+        LocalDate startDate = LocalDate.parse(from);
+        LocalDate thirtyDaysAgo = startDate.minusDays(30);
+
+        // Pre-fetch all metrics in single query
+        List<DailyMetrics> allMetrics = repository.findByDateRange(thirtyDaysAgo.toString(), to);
+
         List<DailyMetrics> metricsList = repository.findByDateRange(from, to);
         List<TodaySummaryResponse> responses = new ArrayList<>();
+
         for (DailyMetrics metrics : metricsList) {
-            responses.add(getTodaySummary(metrics.getDate()));
+            String dateStr = metrics.getDate();
+            LocalDate targetDate = LocalDate.parse(dateStr);
+            String cutoffStr = targetDate.minusDays(30).toString();
+
+            // Filter in-memory
+            List<DailyMetrics> historyForDate = allMetrics.stream()
+                    .filter(m -> {
+                        String d = m.getDate();
+                        return d.compareTo(cutoffStr) >= 0 && d.compareTo(dateStr) <= 0;
+                    })
+                    .collect(Collectors.toList());
+
+            responses.add(getTodaySummary(dateStr, historyForDate));
         }
         return responses;
     }
