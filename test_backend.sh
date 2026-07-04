@@ -151,8 +151,27 @@ echo "Completed workout day!"
 section "10. Fetching active program workout after completion (should be Pull Day)..."
 curl -s http://localhost:8080/api/programs/today | json_pp || curl -s http://localhost:8080/api/programs/today
 
-# 11. Predictions
-section "11. Fetching predictions..."
+# 11. Import JSON historical data
+section "11. Importing JSON historical data..."
+IMPORT_JOB_ID=$(curl -s -X POST http://localhost:8080/api/import/json \
+  -F "file=@/Users/rcred/Documents/krypton/assets/apple_health_export_2026_07_02.json" | grep -o '"jobId":"[^"]*' | grep -o '[^"]*$')
+
+echo "Submitted JSON import job! Job ID: $IMPORT_JOB_ID"
+
+# Poll import status
+for i in {1..30}; do
+    STATUS_RESP=$(curl -s http://localhost:8080/api/import/status/$IMPORT_JOB_ID)
+    STATUS=$(echo $STATUS_RESP | grep -o '"status":"[^"]*' | grep -o '[^"]*$')
+    echo "Job status: $STATUS"
+    if [ "$STATUS" == "COMPLETED" ] || [ "$STATUS" == "FAILED" ]; then
+        echo $STATUS_RESP | json_pp || echo $STATUS_RESP
+        break
+    fi
+    sleep 2
+done
+
+# 12. Predictions (now with rich historical data!)
+section "12. Fetching predictions with rich historical data..."
 curl -s "http://localhost:8080/api/health/predictions?metrics=weight,sleepHours,workoutConsistency,eggsConsistency&horizons=2w,1m" | json_pp || curl -s "http://localhost:8080/api/health/predictions?metrics=weight,sleepHours,workoutConsistency,eggsConsistency&horizons=2w,1m"
 
 # Cleanup
@@ -161,3 +180,4 @@ kill -9 $SERVER_PID || true
 rm -f server_test.log
 echo "Server stopped successfully!"
 echo "=== TEST COMPLETED SUCCESSFULLY ==="
+

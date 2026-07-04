@@ -22,6 +22,12 @@ public class ImportController {
         return ResponseEntity.ok(status);
     }
 
+    @PostMapping("/json")
+    public ResponseEntity<ImportStatusResponse> importJson(@RequestParam("file") MultipartFile file) {
+        ImportStatusResponse status = importService.startJsonImportJob(file);
+        return ResponseEntity.ok(status);
+    }
+
     @GetMapping("/status/{jobId}")
     public ResponseEntity<ImportStatusResponse> getImportStatus(@PathVariable String jobId) {
         ImportStatusResponse status = importService.getJobStatus(jobId);
